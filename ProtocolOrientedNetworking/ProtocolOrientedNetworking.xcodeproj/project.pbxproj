@@ -16,6 +16,7 @@
 		1C203E10225AB60700D45A58 /* ProtocolOrientedNetworkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E0F225AB60700D45A58 /* ProtocolOrientedNetworkingUITests.swift */; };
 		1C203E25225AB7CF00D45A58 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E24225AB7CF00D45A58 /* EndpointType.swift */; };
 		1C203E27225AB8D400D45A58 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E26225AB8D400D45A58 /* HTTPTask.swift */; };
+		1C203E29225ABC5C00D45A58 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E28225ABC5C00D45A58 /* URLParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1C203E11225AB60700D45A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C203E24225AB7CF00D45A58 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
 		1C203E26225AB8D400D45A58 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		1C203E28225ABC5C00D45A58 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		1C203E21225AB75200D45A58 /* Encoding */ = {
 			isa = PBXGroup;
 			children = (
+				1C203E28225ABC5C00D45A58 /* URLParameterEncoder.swift */,
 			);
 			path = Encoding;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				1C203DF2225AB60500D45A58 /* ViewController.swift in Sources */,
 				1C203E27225AB8D400D45A58 /* HTTPTask.swift in Sources */,
 				1C203DF0225AB60500D45A58 /* AppDelegate.swift in Sources */,
+				1C203E29225ABC5C00D45A58 /* URLParameterEncoder.swift in Sources */,
 				1C203E25225AB7CF00D45A58 /* EndpointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

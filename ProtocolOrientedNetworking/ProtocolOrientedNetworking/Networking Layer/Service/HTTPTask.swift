@@ -26,3 +26,13 @@ public protocol ParameterEncoder {
     // If passing request by reference have to make static so there is not multiple instantations ... cause for corruption and throws custom error of your choice
     static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws
 }
+
+public enum NetworkError: String, Error {
+    // For custom errors
+    
+    case parametersNil = "Missing parameters on request"
+    
+    case encodingFailed = "Failed to encode configurations"
+    
+    case missingURL = "Failed to provide a url"
+}
