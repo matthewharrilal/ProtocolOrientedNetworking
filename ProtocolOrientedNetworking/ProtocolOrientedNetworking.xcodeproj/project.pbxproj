@@ -97,6 +97,8 @@
 		1C203DEE225AB60500D45A58 /* ProtocolOrientedNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				1C203E22225AB76800D45A58 /* Model */,
+				1C203E1D225AB71300D45A58 /* Networking Layer */,
 				1C203DEF225AB60500D45A58 /* AppDelegate.swift */,
 				1C203DF1225AB60500D45A58 /* ViewController.swift */,
 				1C203DF3225AB60500D45A58 /* Main.storyboard */,
@@ -123,6 +125,52 @@
 				1C203E11225AB60700D45A58 /* Info.plist */,
 			);
 			path = ProtocolOrientedNetworkingUITests;
+			sourceTree = "<group>";
+		};
+		1C203E1D225AB71300D45A58 /* Networking Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1C203E21225AB75200D45A58 /* Encoding */,
+				1C203E20225AB74D00D45A58 /* Service */,
+				1C203E1F225AB74700D45A58 /* Manager */,
+				1C203E1E225AB73000D45A58 /* Endpoint */,
+			);
+			path = "Networking Layer";
+			sourceTree = "<group>";
+		};
+		1C203E1E225AB73000D45A58 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		1C203E1F225AB74700D45A58 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1C203E20225AB74D00D45A58 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1C203E21225AB75200D45A58 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		1C203E22225AB76800D45A58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
