@@ -12,9 +12,17 @@ public typealias HTTPHeaders =  [String: String]
 public typealias Parameters = [String: Any]
 
 public enum HTTPTask {
-    case request
+    case request // If the request needs no configuration
     
+    // If request is comprised of a body and url parameters
     case requestParameters(bodyParameters: Parameters?, urlParameters: Parameters)
     
+    // If request is compromised of headers as well but may not be post requet --> opitionl!
     case requestParametersandHeaders(bodyParameters: Parameters?, urlParameters: Parameters?, headers: HTTPHeaders?)
+}
+
+public protocol ParameterEncoder {
+    
+    // If passing request by reference have to make static so there is not multiple instantations ... cause for corruption and throws custom error of your choice
+    static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws
 }
