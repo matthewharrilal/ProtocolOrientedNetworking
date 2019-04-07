@@ -14,6 +14,8 @@
 		1C203DFA225AB60700D45A58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C203DF8225AB60700D45A58 /* LaunchScreen.storyboard */; };
 		1C203E05225AB60700D45A58 /* ProtocolOrientedNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E04225AB60700D45A58 /* ProtocolOrientedNetworkingTests.swift */; };
 		1C203E10225AB60700D45A58 /* ProtocolOrientedNetworkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E0F225AB60700D45A58 /* ProtocolOrientedNetworkingUITests.swift */; };
+		1C203E25225AB7CF00D45A58 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E24225AB7CF00D45A58 /* EndpointType.swift */; };
+		1C203E27225AB8D400D45A58 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E26225AB8D400D45A58 /* HTTPTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1C203E0B225AB60700D45A58 /* ProtocolOrientedNetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolOrientedNetworkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C203E0F225AB60700D45A58 /* ProtocolOrientedNetworkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolOrientedNetworkingUITests.swift; sourceTree = "<group>"; };
 		1C203E11225AB60700D45A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C203E24225AB7CF00D45A58 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		1C203E26225AB8D400D45A58 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 		1C203E20225AB74D00D45A58 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1C203E24225AB7CF00D45A58 /* EndpointType.swift */,
+				1C203E26225AB8D400D45A58 /* HTTPTask.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C203DF2225AB60500D45A58 /* ViewController.swift in Sources */,
+				1C203E27225AB8D400D45A58 /* HTTPTask.swift in Sources */,
 				1C203DF0225AB60500D45A58 /* AppDelegate.swift in Sources */,
+				1C203E25225AB7CF00D45A58 /* EndpointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
