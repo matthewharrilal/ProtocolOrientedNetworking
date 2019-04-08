@@ -8,6 +8,7 @@
 
 import Foundation
 
+typealias PokemonData = (_ pokemon: Pokemon?, _ error: String?) -> ()
 
 public struct NetworkManager {
     let router = Router<PokeAPI>() // Router configured to handle PokeAPI response
@@ -43,5 +44,36 @@ fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<St
     default:
         return .failure(NetworkResponse.failed.rawValue)
         
+    }
+}
+
+func getPokemon(name: String, completion: @escaping (_ pokemon: Pokemon?, _ error: String?) -> ()) {
+    let networkManager = NetworkManager()
+    networkManager.router.request(.pokemonName(name: name)) { (data, response, error) in
+        if error != nil {
+            completion(nil, "Please check network connection")
+        }
+        
+        if let response = response as? HTTPURLResponse {
+            let result = handleNetworkResponse(response)
+            switch result {
+            case .success:
+                // If the request comes back successful
+                guard let responseData = data else {
+                    return completion(nil, NetworkResponse.noData.rawValue)
+                }
+                
+                do {
+                    let pokemon = try JSONDecoder().decode(Pokemon.self, from: responseData)
+                    completion(pokemon, nil)
+                }
+                catch {
+                    completion(nil, NetworkResponse.unableToDecode.rawValue)
+                }
+                
+            case .failure:
+                completion(nil, NetworkResponse.failed.rawValue)
+            }
+        }
     }
 }
