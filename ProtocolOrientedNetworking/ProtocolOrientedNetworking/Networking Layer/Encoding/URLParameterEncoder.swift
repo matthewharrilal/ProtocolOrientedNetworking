@@ -15,9 +15,9 @@ public struct URLParameterEncoder: ParameterEncoder {
         
         guard let url = urlRequest.url,
             var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
-            else {throw NetworkError.missingURL} // Throw error if url is missing
+            else  {throw NetworkError.missingURL} // Throw error if url is missing
         
-        // Only if there are parameters to concatenate 
+        // Only if there are parameters to concatenate
         if  !parameters.isEmpty {
             
             urlComponents.queryItems = [URLQueryItem]() // Queuries contained on the url
