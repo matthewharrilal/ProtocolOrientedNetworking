@@ -10,13 +10,14 @@ import Foundation
 
 // Endpoint is of generic type --> type of class depends on type of endpoint
 class Router<EndPoint: EndpointType>: NetworkRouter {
+    
     private var task: URLSessionTask?  // We do not want other files accessing our task
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
-        
         do {
             let request = try self.buildRequest(from: route)
+            
         }
             
         catch {
@@ -44,7 +45,7 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
                 try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
                 
             case .requestParametersandHeaders(let bodyParameters, let urlParameters, let headers):
-                
+                self.addAdditionalHeaders(headers, request: &request)
             }
         }
     }
@@ -64,4 +65,12 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
         }
     }
     
+    
+    fileprivate func addAdditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
+        guard let headers = additionalHeaders else {return}
+        
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+    }
 }

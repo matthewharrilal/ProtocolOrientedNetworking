@@ -14,6 +14,7 @@ public typealias NetworkRouterCompletion = (_ data: Data?, _ response: URLRespon
 
 // Protocol can only be conformed to other class objects
 protocol NetworkRouter: class {
+    
     associatedtype EndPoint: EndpointType // Our endpoint type can be composed of different types therefore we are making the attribute generic
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion)
