@@ -30,7 +30,8 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
     }
     
     func cancel() {
-        
+        // Cancel the current network task if need be
+        self.task?.cancel()
     }
     
     // When you denote a method as a class func it is a reference to the objects original spot in memory ... static
