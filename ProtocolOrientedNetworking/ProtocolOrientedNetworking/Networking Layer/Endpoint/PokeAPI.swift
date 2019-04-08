@@ -19,13 +19,14 @@ public enum HTTPMethods: String {
     
     case post = "POST"
     
-    case delete = "DELETE"
+    case delete = ""
 }
 
 
 extension PokeAPI: EndpointType {
     var baseUrl: URL {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/")
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/") else {fatalError("Base url could not be configured")}
+        return url
     }
     
     var path: String {
@@ -38,13 +39,12 @@ extension PokeAPI: EndpointType {
     }
     
     var httpMethod: String {
-        return "get" // Can make more dynamic
+        return HTTPMethods.get.rawValue
     }
     
     var task: HTTPTask {
-        
+        // This request contains no parameters or query items ... configurations are apart of pathway
+        return .request
     }
-    
-    // Extend our enum containing endpoints to configure the corresponding base url
-    
+        
 }
