@@ -18,6 +18,9 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
         do {
             let request = try self.buildRequest(from: route)
             
+            task = session.dataTask(with: request, completionHandler: { (data, response, error) in
+                completion(data, response, error)
+            })
         }
             
         catch {
@@ -46,7 +49,14 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
                 
             case .requestParametersandHeaders(let bodyParameters, let urlParameters, let headers):
                 self.addAdditionalHeaders(headers, request: &request)
+                
+                try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
             }
+            return request
+        }
+        
+        catch {
+            throw error // When you want to return something against the concrete return type
         }
     }
     
