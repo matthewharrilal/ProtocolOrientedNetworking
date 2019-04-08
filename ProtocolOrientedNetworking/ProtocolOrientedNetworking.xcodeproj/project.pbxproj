@@ -20,6 +20,7 @@
 		1C203E2B225BBB0B00D45A58 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E2A225BBB0B00D45A58 /* JSONParameterEncoder.swift */; };
 		1C203E2D225BBBDF00D45A58 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E2C225BBBDF00D45A58 /* NetworkRouter.swift */; };
 		1C203E2F225BBD6200D45A58 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E2E225BBD6200D45A58 /* Router.swift */; };
+		1C203E31225BCBBA00D45A58 /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E30225BCBBA00D45A58 /* PokeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1C203E2A225BBB0B00D45A58 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		1C203E2C225BBBDF00D45A58 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		1C203E2E225BBD6200D45A58 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1C203E30225BCBBA00D45A58 /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		1C203E1E225AB73000D45A58 /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
+				1C203E30225BCBBA00D45A58 /* PokeAPI.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				1C203DF2225AB60500D45A58 /* ViewController.swift in Sources */,
 				1C203E27225AB8D400D45A58 /* HTTPTask.swift in Sources */,
 				1C203E2B225BBB0B00D45A58 /* JSONParameterEncoder.swift in Sources */,
+				1C203E31225BCBBA00D45A58 /* PokeAPI.swift in Sources */,
 				1C203DF0225AB60500D45A58 /* AppDelegate.swift in Sources */,
 				1C203E29225ABC5C00D45A58 /* URLParameterEncoder.swift in Sources */,
 				1C203E2F225BBD6200D45A58 /* Router.swift in Sources */,
