@@ -41,7 +41,7 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 
             case .requestParameters(let bodyParameters, let urlParameters):
-                try self.configute
+                try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
                 
             case .requestParametersandHeaders(let bodyParameters, let urlParameters, let headers):
                 
