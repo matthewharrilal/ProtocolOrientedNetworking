@@ -19,6 +19,7 @@
 		1C203E29225ABC5C00D45A58 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E28225ABC5C00D45A58 /* URLParameterEncoder.swift */; };
 		1C203E2B225BBB0B00D45A58 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E2A225BBB0B00D45A58 /* JSONParameterEncoder.swift */; };
 		1C203E2D225BBBDF00D45A58 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E2C225BBBDF00D45A58 /* NetworkRouter.swift */; };
+		1C203E2F225BBD6200D45A58 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E2E225BBD6200D45A58 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1C203E28225ABC5C00D45A58 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		1C203E2A225BBB0B00D45A58 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		1C203E2C225BBBDF00D45A58 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		1C203E2E225BBD6200D45A58 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				1C203E24225AB7CF00D45A58 /* EndpointType.swift */,
 				1C203E26225AB8D400D45A58 /* HTTPTask.swift */,
 				1C203E2C225BBBDF00D45A58 /* NetworkRouter.swift */,
+				1C203E2E225BBD6200D45A58 /* Router.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				1C203E2B225BBB0B00D45A58 /* JSONParameterEncoder.swift in Sources */,
 				1C203DF0225AB60500D45A58 /* AppDelegate.swift in Sources */,
 				1C203E29225ABC5C00D45A58 /* URLParameterEncoder.swift in Sources */,
+				1C203E2F225BBD6200D45A58 /* Router.swift in Sources */,
 				1C203E25225AB7CF00D45A58 /* EndpointType.swift in Sources */,
 				1C203E2D225BBBDF00D45A58 /* NetworkRouter.swift in Sources */,
 			);
