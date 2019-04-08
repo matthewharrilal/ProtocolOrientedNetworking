@@ -33,8 +33,8 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
         
     }
     
-    
-    fileprivate class func buildRequest(from route: EndPoint) throws -> URLRequest {
+    // When you denote a method as a class func it is a reference to the objects original spot in memory ... static
+    fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
         var request = URLRequest(url: route.baseUrl.appendingPathComponent(route.path), cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
         
         request.httpMethod = route.httpMethod
