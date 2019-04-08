@@ -35,20 +35,26 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
     
     // When you denote a method as a class func it is a reference to the objects original spot in memory ... static
     fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
+        // In charge of configuring the request with the necessary parameters and configurations if need be
         var request = URLRequest(url: route.baseUrl.appendingPathComponent(route.path), cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
         
-        request.httpMethod = route.httpMethod
+        request.httpMethod = route.httpMethod // Assign the HTTP method to the request
         
         do {
             switch (route.task) {  // Depending on the additional configurations being sent with the request
             case .request:
-                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                if request.value(forHTTPHeaderField: "Content-Type") == nil {
+                      request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                }
+              
                 
             case .requestParameters(let bodyParameters, let urlParameters):
+                
+                // In charge of configuring parameters on the request
                 try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
                 
             case .requestParametersandHeaders(let bodyParameters, let urlParameters, let headers):
-                self.addAdditionalHeaders(headers, request: &request)
+                self.addAdditionalHeaders(headers, request: &request) // Add headers to the request
                 
                 try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
             }
