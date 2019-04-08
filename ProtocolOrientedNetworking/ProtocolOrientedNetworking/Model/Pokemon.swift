@@ -39,6 +39,7 @@ struct Form: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: FormKeys.self)
+        // Overwriting stored properties
         form = try container.decode([Ability].self, forKey: .form)
     }
 }
@@ -55,6 +56,7 @@ struct Ability: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: AbilityKeys.self)
         
+        // Overwriting stored properties
         name = try container.decode(String.self, forKey: .name)
         url = try container.decode(String.self, forKey: .url)
     }
