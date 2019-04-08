@@ -23,3 +23,25 @@ public enum NetworkResponse: String {
     case noData = "The network call resulted in no data being sent back"
     case unableToDecode = "Unable to decode the response"
 }
+
+public enum Result<String> {
+    case success(String)
+    case failure(String)
+}
+
+
+fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
+    switch response.statusCode {
+    case 200 ... 299:
+        return .success(NetworkResponse.success.rawValue)
+    case 401 ... 500:
+        return .failure(NetworkResponse.authenticationError.rawValue)
+    case 501 ... 599:
+        return .failure(NetworkResponse.badRequest.rawValue)
+    case 600:
+        return .failure(NetworkResponse.outdated.rawValue)
+    default:
+        return .failure(NetworkResponse.failed.rawValue)
+        
+    }
+}
