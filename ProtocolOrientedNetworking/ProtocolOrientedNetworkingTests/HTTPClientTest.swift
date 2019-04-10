@@ -10,6 +10,8 @@ import Foundation
 import XCTest
 @testable import ProtocolOrientedNetworking
 
+// What else can be tested maybe the actual networking layer?
+
 class HttpClientTests: XCTestCase {
     var httpClient: HttpClient!
     
