@@ -11,7 +11,7 @@ import Foundation
 typealias PokemonData = (_ pokemon: Pokemon?, _ error: String?) -> ()
 
 public struct NetworkManager {
-    let router = Router<PokeAPI>() // Router configured to handle PokeAPI response
+    let router = Router<PokeAPI>() // Router configured to handle PokeAPI response with the neccessary components
 }
 
 
