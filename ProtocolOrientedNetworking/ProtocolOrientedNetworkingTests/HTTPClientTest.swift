@@ -36,7 +36,7 @@ class HttpClientTests: XCTestCase {
         XCTAssertEqual(url, mockSession.lastURL)
     }
     
-    func test_request_returned_data() {
+    func test_task_was_started() {
         guard let url = URL(string: "https://example.com") else {return}
         
         httpClient.get(url: url) { (data, error) in
@@ -44,6 +44,23 @@ class HttpClientTests: XCTestCase {
         }
         
         XCTAssert(mockSession.nextDataTask.resumeWasCalled)
+    }
+    
+    func test_data_was_returned() {
+        guard let url = URL(string: "https://example.com") else {return}
+        
+        let stubbedData = "{}".data(using: .utf8)
+        
+        mockSession.nextData = stubbedData // Now that we have set the data
+        
+        var returnedData: Data?
+        httpClient.get(url: url) { (data, error) in
+            
+            // Check whether the completion handler returned the data
+            returnedData = data
+        }
+        
+        XCTAssertNotNil(returnedData) // Mark if the data has been set
     }
 
 }
