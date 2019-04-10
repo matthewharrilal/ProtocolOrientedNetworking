@@ -31,9 +31,21 @@ class HttpClient {
     func get(url: URL, completionHandler: @escaping completeClosure) {
         var request = URLRequest(url: url)
         
+        request.httpMethod = "GET"
+        
         let task = session.dataTask(with: request) { (data, response, error) in
             completionHandler(data, error)
         }
         task.resume()
     }
 }
+
+extension URLSession: URLSessionProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping URLSession.DataTaskResult) -> URLSessionDataTaskProtocol {
+        // Returns the same data back this comes into play when we start testing these cases --> Passing in the same comple-tion handler of data
+        return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTaskProtocol
+    }
+}
+
+
+
