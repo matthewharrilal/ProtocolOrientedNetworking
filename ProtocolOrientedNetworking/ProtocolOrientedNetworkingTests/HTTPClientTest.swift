@@ -35,5 +35,15 @@ class HttpClientTests: XCTestCase {
         
         XCTAssertEqual(url, mockSession.lastURL)
     }
+    
+    func test_request_returned_data() {
+        guard let url = URL(string: "https://example.com") else {return}
+        
+        httpClient.get(url: url) { (data, error) in
+            // Doesn't matter because we are just checking if the network request was actually kicked off
+        }
+        
+        XCTAssert(mockSession.nextDataTask.resumeWasCalled)
+    }
 
 }
