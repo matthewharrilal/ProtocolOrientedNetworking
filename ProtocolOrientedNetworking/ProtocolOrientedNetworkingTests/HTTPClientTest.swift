@@ -8,5 +8,10 @@
 
 import Foundation
 import XCTest
+@testable import ProtocolOrientedNetworking
 
-
+class HttpClientTests: XCTestCase {
+    var httpClient: HttpClient!
+    
+    
+}
