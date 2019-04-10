@@ -15,6 +15,7 @@ public struct NetworkManager {
 }
 
 
+// Some elegant enums used to be able to mark the status of the request at every step of the way such as the decoding process, the network request process, and others that you can see below
 public enum NetworkResponse: String {
     case success = "Network call was a success"
     case authenticationError = "You need to be authenticated first"
@@ -55,7 +56,7 @@ func getPokemon(name: String, completion: @escaping (_ pokemon: Pokemon?, _ erro
         }
         
         if let response = response as? HTTPURLResponse {
-            let result = handleNetworkResponse(response)
+            let result = handleNetworkResponse(response) // Based off the response output the appropriate response
             switch result {
             case .success:
                 // If the request comes back successful

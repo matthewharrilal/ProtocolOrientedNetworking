@@ -8,7 +8,9 @@
 
 import Foundation
 
-// Endpoint is of generic type --> type of class depends on type of endpoint
+// Endpoint is of generic type --> type of class depends on type of endpoint ... Inherits it attributes from the Network Router
+
+// Use this class to configure custom apis and the attributes corresponding to fetch results
 class Router<EndPoint: EndpointType>: NetworkRouter {
     
     private var task: URLSessionTask?  // We do not want other files accessing our task
@@ -16,6 +18,7 @@ class Router<EndPoint: EndpointType>: NetworkRouter {
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
         do {
+            // In charge of adding configurations to the given request such as the parameters and the headers if need be
             let request = try self.buildRequest(from: route)
             
             task = session.dataTask(with: request, completionHandler: { (data, response, error) in
