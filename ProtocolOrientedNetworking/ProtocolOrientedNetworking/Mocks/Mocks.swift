@@ -56,6 +56,8 @@ class MockURLSession: URLSessionProtocol {
 
     func dataTask(with request: URLRequest, completionHandler: @escaping MockURLSession.DataTaskResult) -> URLSessionDataTaskProtocol {
         
+        lastURL = request.url // To mark that the request was made but before execution ... passes parameter check
+        
         // Going to be set before this data task method is called therefore having data when being passed back up via the completion handler
         completionHandler(nextData, successHttpURLResponse(request: request), nextError)
         
