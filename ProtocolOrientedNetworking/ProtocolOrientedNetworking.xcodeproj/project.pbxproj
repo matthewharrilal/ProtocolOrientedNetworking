@@ -24,6 +24,7 @@
 		1C203E33225BCE9C00D45A58 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E32225BCE9C00D45A58 /* Pokemon.swift */; };
 		1C203E35225BD74500D45A58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C203E34225BD74500D45A58 /* NetworkManager.swift */; };
 		1CE5CEE7225E59D40041006A /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5CEE6225E59D40041006A /* Mocks.swift */; };
+		1CE5CEE9225E6AEE0041006A /* HTTPClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5CEE8225E6AEE0041006A /* HTTPClientTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		1C203E32225BCE9C00D45A58 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		1C203E34225BD74500D45A58 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1CE5CEE6225E59D40041006A /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		1CE5CEE8225E6AEE0041006A /* HTTPClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				1C203E04225AB60700D45A58 /* ProtocolOrientedNetworkingTests.swift */,
 				1C203E06225AB60700D45A58 /* Info.plist */,
+				1CE5CEE8225E6AEE0041006A /* HTTPClientTest.swift */,
 			);
 			path = ProtocolOrientedNetworkingTests;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C203E05225AB60700D45A58 /* ProtocolOrientedNetworkingTests.swift in Sources */,
+				1CE5CEE9225E6AEE0041006A /* HTTPClientTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

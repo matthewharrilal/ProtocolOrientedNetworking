@@ -40,13 +40,6 @@ class HttpClient {
     }
 }
 
-extension URLSession: URLSessionProtocol {
-    func dataTask(with request: URLRequest, completionHandler: @escaping URLSession.DataTaskResult) -> URLSessionDataTaskProtocol {
-        // Returns the same data back this comes into play when we start testing these cases --> Passing in the same comple-tion handler of data
-        return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
-    }
-}
-
 // Clarify why when your extension conforms to a protocol why it doesn't need to add the protocol stubs?
 extension URLSessionDataTask: URLSessionDataTaskProtocol {}
 
@@ -79,3 +72,4 @@ class MockURLSessionDataTask: URLSessionDataTaskProtocol {
         self.resumeWasCalled = true
     }
 }
+
